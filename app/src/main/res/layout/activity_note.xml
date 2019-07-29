@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightYellow">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:overScrollMode="never"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/note_toolbar"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <include layout="@layout/layout_note_toolbar"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.zerobytes.sanju.notesapp.LinedEditText
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/note_text"
+        android:textSize="23sp"
+        android:textColor="#000"
+        android:padding="5dp"
+        android:gravity="top"
+        android:imeOptions="flagNoExtractUi"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
